@@ -1,5 +1,3 @@
-@if exist test.bin del test.bin
-
 generate_build_tag.py
 
 "c:\Program Files\nasm\nasm.exe" -f elf k_entry.asm -o k_entry.o
@@ -26,13 +24,10 @@ e:\vm-shared\i386-elf\bin\i386-elf-gcc.exe -nostdinc -fno-builtin -c pci.c -o pc
 e:\vm-shared\i386-elf\bin\i386-elf-gcc.exe -nostdinc -fno-builtin -c kernel.c  -o kernel.o
 @if %ERRORLEVEL% NEQ 0 goto :FaultyEnd
 
-e:\vm-shared\i386-elf\bin\i386-elf-ld.exe -Map test.map -T kernel.ld -o test.elf k_entry.o kernel.o string.o vsprintf.o display.o kb.o i386.o idt.o irq.o isrs.o pci.o
+e:\vm-shared\i386-elf\bin\i386-elf-ld.exe -Map kernel.map -T kernel.ld -o kernel.elf k_entry.o kernel.o string.o vsprintf.o display.o kb.o i386.o idt.o irq.o isrs.o pci.o
 @if %ERRORLEVEL% NEQ 0 goto :FaultyEnd
 
-e:\vm-shared\i386-elf\bin\i386-elf-objdump.exe -d test.elf > test.lst
-
-e:\vm-shared\i386-elf\bin\i386-elf-objcopy.exe -I elf32-i386 -O binary test.elf test.bin
-@if %ERRORLEVEL% NEQ 0 goto :FaultyEnd
+e:\vm-shared\i386-elf\bin\i386-elf-objdump.exe -d kernel.elf > kernel.lst
 
 @goto :End
 
