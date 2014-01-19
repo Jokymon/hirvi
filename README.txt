@@ -31,6 +31,11 @@ Interrupts & Exceptions handling
 http://wiki.osdev.org/I_Cant_Get_Interrupts_Working
 http://www.osdever.net/tutorials/view/interrupts-exceptions-and-idts-part-3-idts
 
+PIC
+===
+
+http://wiki.osdev.org/8259_PIC
+
 Programming the NE2000
 ======================
 
@@ -44,9 +49,19 @@ Info on PCI programming
 http://wiki.osdev.org/PCI
 http://www.waste.org/~winkles/hardware/pci.htm
 
+ATA driver
+==========
+
+http://wiki.osdev.org/ATA_PIO_Mode
+http://www.t13.org/documents/UploadedDocuments/project/d1410r3b-ATA-ATAPI-6.pdf
+http://f.osdev.org/viewtopic.php?f=1&t=17077
+http://forum.osdev.org/viewtopic.php?t=12268
+http://www.osdever.net/tutorials/view/lba-hdd-access-via-pio
+
 Additional links
 ================
 
 http://www.osdever.net/papers/index
 http://www.jamesmolloy.co.uk/tutorial_html/4.-The%20GDT%20and%20IDT.html
 http://www.brackeen.com/vga/
+http://bochs.sourceforge.net/techspec/PORTS.LST
