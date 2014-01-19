@@ -13,7 +13,6 @@ k_main() // like main
 
 	k_puts("Welcome to MoOS version 0.1 (" BUILDTAG ")\n");
     k_puts("\n");
-	k_puts("Right now the kernel is loaded at 1MB physical,\nbut mapped at FF800000 hex.\n");
     if (pci_is_available())
     {
 	    k_puts(" Detected a PCI bus\n");
