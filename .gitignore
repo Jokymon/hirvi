@@ -1,0 +1,11 @@
+*.swp
+*.o
+*.elf
+*.lst
+*.map
+
+*.pyc
+
+build_tag.h
+
+.sconsign.dblite
